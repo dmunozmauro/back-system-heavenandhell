@@ -1,0 +1,10 @@
+Database name: databasehh
+Collection name: eliquid
+
+Document eliquid
+
+name: 		string
+ml:		int32
+nicotine: 	string
+stock: 		int32
+price: 		int32
