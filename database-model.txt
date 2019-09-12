@@ -8,3 +8,7 @@ ml:		int32
 nicotine: 	string
 stock: 		int32
 price: 		int32
+
+faltan
+
+type: string
