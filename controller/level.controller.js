@@ -14,14 +14,16 @@ var level_controller = {
 		});
 	},
 
-	/* getDataLevel: function(req, res) {
-		Level.find({}).exec((err, level) => {
-			if (err) return res.status(500).send({ message: 'Error al consultar. Method: getDataEliquid' });
-			if (!level) return res.status(404).send({ message: 'No existen liquidos' });
-			return res.status(200).send({ level });
+	getStock: function(req, res) {
+		var nicotina = req.params.nicotine;
+        if (nicotina == null) return res.status(404).send({ message: 'No existe nicotina' });
+        
+		Level.find({nicotine: nicotina}).exec((err, stock) => {
+			if (err) return res.status(500).send({ message: 'Error al consultar el nivel. Method: getStock' });
+			if (!stock) return res.status(404).send({ message: 'No existen niveles' });
+			return res.status(200).send({ stock });
 		});
-	} */
-
+	}
 };
 
 module.exports = level_controller;

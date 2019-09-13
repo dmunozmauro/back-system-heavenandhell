@@ -5,12 +5,10 @@ var Schema = mongoose.Schema;
 
 var EliquidSchema = Schema({
     name: String,
-    /* ml: Number,
-    nicotine: String,
-    stock: Number,
-    price: Number,
+    ml: String,
+    price: String,
     type: String,
-    description: String */
+    description: String
 });
 
-module.exports = mongoose.model('Eliquid',  new Schema({url: String, text: String, id: Number}), 'eliquid');
+module.exports = mongoose.model('Eliquid',  new Schema({url: String, text: String, id: Number}), 'eliquids');
