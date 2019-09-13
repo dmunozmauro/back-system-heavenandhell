@@ -17,3 +17,12 @@ mongoose.connect('mongodb://localhost:27017/databasehh')
     .catch(err => {
         console.log(err);
     });
+
+    /* var MongoClient = require('mongodb').MongoClient;
+    var url = "mongodb://localhost:27017/databasehh";
+
+    MongoClient.connect(url, (err, db) => {
+        if (err) throw err;
+        console.log("database creada o conectada");
+        db.close();
+    }); */

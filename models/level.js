@@ -14,4 +14,5 @@ var LevelSchema = Schema({
     id_eliquid: String
 });
 
-module.exports = mongoose.model('levels', LevelSchema);
+module.exports = mongoose.model('Level', new Schema({url: String, text: String, id: Number}),
+                    'level');

@@ -11,7 +11,7 @@ router.post('/save-eliquid', EliquidController.saveEliquid);
 
 //CONSULTA POR UN LIQUIDO
 router.get('/eliquid/:name', EliquidController.getEliquid);
-router.get('/level', LevelController.getDataLevel);
+router.get('/level/:id', LevelController.getDataLevel);
 
 //CONSULTA POR TODA LA DATABASE
 router.get('/data-eliquids', EliquidController.getDataEliquid);

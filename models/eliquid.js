@@ -13,4 +13,4 @@ var EliquidSchema = Schema({
     description: String */
 });
 
-module.exports = mongoose.model('Eliquid', EliquidSchema);
+module.exports = mongoose.model('Eliquid',  new Schema({url: String, text: String, id: Number}), 'eliquid');
