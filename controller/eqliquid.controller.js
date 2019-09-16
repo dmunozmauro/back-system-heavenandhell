@@ -12,11 +12,9 @@ var controller = {
         eliquid.price = params.price;
         eliquid.type = params.type;
 		eliquid.description = params.description;
-		
-		/* eliquid.nicotine = params.nicotine;
-        eliquid.stock = params.stock; */
 
 		eliquid.save((err, eliquidStored) => {
+			console.log('datos', eliquidStored);
 			if (err) return res.status(500).send({ message: 'Error al guardar el liquido: method saveEliquid' });
 			if (!eliquidStored) return res.status(404).send({ message: 'No se ha podido guardar el liquido' });
 			return res.status(200).send({ eliquid: eliquidStored });
