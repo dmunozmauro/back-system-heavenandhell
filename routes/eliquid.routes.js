@@ -10,7 +10,7 @@ router.post('/save-eliquid', EliquidController.saveEliquid);
 router.get('/eliquid/:name', EliquidController.getEliquid);
 router.get('/data-eliquids', EliquidController.getDataEliquid);
 
-router.get('/stock/:nicotine', LevelController.getStock);
+router.get('/stock/:nicotine/:id', LevelController.getStock);
 router.get('/level/:id', LevelController.getDataLevel);
 
 

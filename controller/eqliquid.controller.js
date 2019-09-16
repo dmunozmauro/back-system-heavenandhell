@@ -27,7 +27,6 @@ var controller = {
 		var eliquidName = req.params.name;
 
 		if (eliquidName == null) return res.status(404).send({ message: 'El liquido no existe' });
-
 		Eliquid.find({ name: eliquidName }).exec((err, eliquid) => {
 			if (err) return res.status(500).send({ message: 'Error al consultar por el liquido method getEliquid' });
 			if (!eliquid) return res.status(404).send({ message: 'El liquido no existe' });

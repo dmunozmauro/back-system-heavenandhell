@@ -15,10 +15,11 @@ var level_controller = {
 	},
 
 	getStock: function(req, res) {
+		var eliquidId = req.params.id;
 		var nicotina = req.params.nicotine;
+
         if (nicotina == null) return res.status(404).send({ message: 'No existe nicotina' });
-        
-		Level.find({nicotine: nicotina}).exec((err, stock) => {
+		Level.find({nicotine: nicotina, id_eliquid: eliquidId}).exec((err, stock) => {
 			if (err) return res.status(500).send({ message: 'Error al consultar el nivel. Method: getStock' });
 			if (!stock) return res.status(404).send({ message: 'No existen niveles' });
 			return res.status(200).send({ stock });
